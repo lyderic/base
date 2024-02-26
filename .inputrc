@@ -1,0 +1,17 @@
+# Completion
+set show-all-if-ambiguous on
+set completion-ignore-case on
+set completion-map-case on
+set mark-symlinked-directories on
+set menu-complete-display-prefix On
+
+# VI mode
+set editing-mode vi
+set show-mode-in-prompt on
+set vi-ins-mode-string "» "
+set vi-cmd-mode-string "ª "
+
+# VI maps
+set keymap vi-insert
+"jj": "\e\e"
+TAB: menu-complete
