@@ -1,4 +1,4 @@
-export BIGBANG_VERSION="2024-02-23"
+export BIGBANG_VERSION="2024-02-26"
 
 # If this script is not sourced, it does nothing
 (return 0 2>/dev/null) || kill -INT $$
@@ -92,6 +92,9 @@ en() {
 
 # easily reload bigbang init and show version
 alias bigbang='. ${HOME}/.bigbang ; blue "bigbang v${BIGBANG_VERSION}"'
+
+# show when in vcsh subshell
+[ -z ${GIT_DIR} ] || PS1="[$(basename ${GIT_DIR})]-${PS1}"
 
 # Wipe history when we close shell
 finish() {
