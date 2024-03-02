@@ -8,8 +8,11 @@ set menu-complete-display-prefix on
 # VI mode
 set editing-mode vi
 set show-mode-in-prompt on
-set vi-ins-mode-string "» "
-set vi-cmd-mode-string "ª "
+#set vi-ins-mode-string "» "
+#set vi-cmd-mode-string "ª "
+set vi-ins-mode-string "\1\e[1;32m\2» \1\e[0m\2"
+set vi-cmd-mode-string "\1\e[1;93m\2ª \1\e[0m\2"
+set colored-stats on
 
 # VI maps
 set keymap vi-command
